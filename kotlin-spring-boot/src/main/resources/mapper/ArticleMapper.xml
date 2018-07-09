@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.kotlin.mapper.ArticleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.github.kotlin.model.Article">
+        <id column="id" property="id" />
+        <result column="categary_id" property="categaryId" />
+        <result column="label_id" property="labelId" />
+        <result column="user_id" property="userId" />
+        <result column="title" property="title" />
+        <result column="author" property="author" />
+        <result column="type" property="type" />
+        <result column="load_url" property="loadUrl" />
+        <result column="content" property="content" />
+        <result column="status" property="status" />
+        <result column="alter_time" property="alterTime" />
+        <result column="create_time" property="createTime" />
+        <result column="read_count" property="readCount" />
+        <result column="comment_count" property="commentCount" />
+    </resultMap>
+
+</mapper>

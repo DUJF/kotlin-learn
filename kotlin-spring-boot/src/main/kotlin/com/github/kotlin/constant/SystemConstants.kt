@@ -1,4 +1,4 @@
-package com.github.kotlin.core
+package com.github.kotlin.constant
 
 /**
  * @author <a href="http://github.com/DUJF">dujf</a>

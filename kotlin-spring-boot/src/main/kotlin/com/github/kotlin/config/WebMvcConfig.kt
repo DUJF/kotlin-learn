@@ -5,10 +5,11 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.http.MediaType
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.http.converter.HttpMessageConverter
-import java.util.ArrayList
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import springfox.documentation.swagger2.annotations.EnableSwagger2
+import com.github.kotlin.core.CurrentUserMethodArgumentResolver
+import org.springframework.web.method.support.HandlerMethodArgumentResolver
 
 
 /**
@@ -18,7 +19,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2
  */
 @Configuration
 @EnableSwagger2
-class WebMvcConfig: WebMvcConfigurerAdapter() {
+class WebMvcConfig : WebMvcConfigurerAdapter() {
   /**
    * 这个地方要重新注入一下资源文件，不然不会注入资源的，也没有注入requestHandlerMappping,相当于xml配置的
    *
@@ -49,6 +50,16 @@ class WebMvcConfig: WebMvcConfigurerAdapter() {
   }
 
   override fun extendMessageConverters(converters: MutableList<HttpMessageConverter<*>>) {
-    converters!!.add(jackson2HttpMessageConverter())
+    converters.add(jackson2HttpMessageConverter())
+  }
+
+  override fun addArgumentResolvers(argumentResolvers: MutableList<HandlerMethodArgumentResolver>) {
+    argumentResolvers.add(currentUserMethodArgumentResolver())
+    super.addArgumentResolvers(argumentResolvers)
+  }
+
+  @Bean
+  fun currentUserMethodArgumentResolver(): CurrentUserMethodArgumentResolver {
+    return CurrentUserMethodArgumentResolver()
   }
 }

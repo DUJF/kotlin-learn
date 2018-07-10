@@ -1,4 +1,4 @@
-package com.github.kotlin.enums
+package com.github.kotlin.constant
 
 /**
  * @author <a href="http://github.com/DUJF">dujf</a>
@@ -10,6 +10,10 @@ package com.github.kotlin.enums
 object RequestPath {
   //base path
   const val BASE_PATH: String = "/api"
+
   //model path
+  //用户
   const val USER: String = "/user"
+  //登陆
+  const val LOGIN: String = "/login"
 }

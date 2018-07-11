@@ -3,11 +3,8 @@
 <mapper namespace="com.github.kotlin.mapper.UserFocusMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.github.kotlin.model.UserFocus">
-        <id column="id" property="id" />
-        <result column="user_id" property="userId" />
-        <result column="user_id_focus" property="userIdFocus" />
-        <result column="create_time" property="createTime" />
+    <resultMap id="BaseResultMap" type="com.github.kotlin.po.UserFocus">
+
     </resultMap>
 
 </mapper>

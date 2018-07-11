@@ -1,6 +1,6 @@
 package com.github.kotlin.service.impl;
 
-import com.github.kotlin.model.System;
+import com.github.kotlin.po.System;
 import com.github.kotlin.mapper.SystemMapper;
 import com.github.kotlin.service.SystemService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

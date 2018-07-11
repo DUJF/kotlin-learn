@@ -1,4 +1,4 @@
-package com.github.kotlin.model
+package com.github.kotlin.po
 
 import com.baomidou.mybatisplus.enums.IdType
 import java.util.Date
@@ -10,24 +10,27 @@ import java.io.Serializable
 
 /**
  * <p>
- * 
+ * 标签
  * </p>
  *
  * @author dujf
  * @since 2018-07-06
  */
-@TableName("system_allocation")
-class SystemAllocation : Model<SystemAllocation>() {
+@TableName("label")
+class Label : Model<Label>() {
 
     @TableId(value = "id", type = IdType.AUTO)
     var id: Int? = null
-    var content: String? = null
+    var name: String? = null
+    /**
+     * 图片
+     */
+    var img: String? = null
+    /**
+     * 创建时间 
+     */
     @TableField("create_time")
     var createTime: Date? = null
-    var name: String? = null
-    var remark: String? = null
-    var status: Int? = null
-    var type: Int? = null
 
 
     override fun pkVal(): Serializable? {
@@ -35,14 +38,11 @@ class SystemAllocation : Model<SystemAllocation>() {
     }
 
     override fun toString(): String {
-        return "SystemAllocation{" +
+        return "Label{" +
         ", id=" + id +
-        ", content=" + content +
-        ", createTime=" + createTime +
         ", name=" + name +
-        ", remark=" + remark +
-        ", status=" + status +
-        ", type=" + type +
+        ", img=" + img +
+        ", createTime=" + createTime +
         "}"
     }
 }

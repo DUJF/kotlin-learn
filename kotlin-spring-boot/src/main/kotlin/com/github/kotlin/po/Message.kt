@@ -1,4 +1,4 @@
-package com.github.kotlin.model
+package com.github.kotlin.po
 
 import com.baomidou.mybatisplus.enums.IdType
 import java.util.Date
@@ -15,32 +15,18 @@ import java.io.Serializable
  * @author dujf
  * @since 2018-07-06
  */
-@TableName("system")
-class System : Model<System>() {
+@TableName("message")
+class Message : Model<Message>() {
 
     @TableId(value = "id", type = IdType.AUTO)
     var id: Int? = null
     var name: String? = null
-    /**
-     * 内容
-     */
+    var email: String? = null
+    var mobile: String? = null
     var content: String? = null
-    /**
-     * l类型
-     */
-    var type: Int? = null
-    /**
-     * 状态
-     */
-    var status: Int? = null
-    /**
-     * 备注
-     */
-    var remark: String? = null
-    /**
-     * 创建时间
-     */
     var createtime: Date? = null
+    var type: Int? = null
+    var status: Int? = null
 
 
     override fun pkVal(): Serializable? {
@@ -48,14 +34,15 @@ class System : Model<System>() {
     }
 
     override fun toString(): String {
-        return "System{" +
+        return "Message{" +
         ", id=" + id +
         ", name=" + name +
+        ", email=" + email +
+        ", mobile=" + mobile +
         ", content=" + content +
+        ", createtime=" + createtime +
         ", type=" + type +
         ", status=" + status +
-        ", remark=" + remark +
-        ", createtime=" + createtime +
         "}"
     }
 }

@@ -1,4 +1,4 @@
-package com.github.kotlin.model
+package com.github.kotlin.po
 
 import com.baomidou.mybatisplus.enums.IdType
 import java.util.Date
@@ -10,14 +10,14 @@ import java.io.Serializable
 
 /**
  * <p>
- * 评论
+ * 
  * </p>
  *
  * @author dujf
  * @since 2018-07-06
  */
-@TableName("comment")
-class Comment : Model<Comment>() {
+@TableName("user_log")
+class UserLog : Model<UserLog>() {
 
     @TableId(value = "id", type = IdType.AUTO)
     var id: Int? = null
@@ -27,27 +27,21 @@ class Comment : Model<Comment>() {
     @TableField("user_id")
     var userId: Int? = null
     /**
-     * 文章id/评论id
+     * 文章id
      */
     @TableField("article_id")
     var articleId: Int? = null
     /**
-     * 内容
+     * 1浏览 2点赞 3
      */
-    var content: String? = null
+    var type: Int? = null
     /**
      * 创建时间
      */
     @TableField("create_time")
     var createTime: Date? = null
-    /**
-     * 1评论文章 2 回复评论文章
-     */
-    var type: Int? = null
-    /**
-     * 1未读 2已读 
-     */
-    var status: Int? = null
+    @TableField("artcle_id")
+    var artcleId: Int? = null
 
 
     override fun pkVal(): Serializable? {
@@ -55,14 +49,13 @@ class Comment : Model<Comment>() {
     }
 
     override fun toString(): String {
-        return "Comment{" +
+        return "UserLog{" +
         ", id=" + id +
         ", userId=" + userId +
         ", articleId=" + articleId +
-        ", content=" + content +
-        ", createTime=" + createTime +
         ", type=" + type +
-        ", status=" + status +
+        ", createTime=" + createTime +
+        ", artcleId=" + artcleId +
         "}"
     }
 }

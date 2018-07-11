@@ -1,6 +1,6 @@
 package com.github.kotlin.mapper;
 
-import com.github.kotlin.model.Label;
+import com.github.kotlin.po.Label;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 /**

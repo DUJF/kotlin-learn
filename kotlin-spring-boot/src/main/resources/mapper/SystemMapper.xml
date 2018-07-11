@@ -3,14 +3,8 @@
 <mapper namespace="com.github.kotlin.mapper.SystemMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.github.kotlin.model.System">
-        <id column="id" property="id" />
-        <result column="name" property="name" />
-        <result column="content" property="content" />
-        <result column="type" property="type" />
-        <result column="status" property="status" />
-        <result column="remark" property="remark" />
-        <result column="createtime" property="createtime" />
+    <resultMap id="BaseResultMap" type="com.github.kotlin.po.System">
+
     </resultMap>
 
 </mapper>

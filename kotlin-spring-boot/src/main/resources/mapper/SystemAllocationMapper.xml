@@ -3,14 +3,7 @@
 <mapper namespace="com.github.kotlin.mapper.SystemAllocationMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.github.kotlin.model.SystemAllocation">
-        <id column="id" property="id" />
-        <result column="content" property="content" />
-        <result column="create_time" property="createTime" />
-        <result column="name" property="name" />
-        <result column="remark" property="remark" />
-        <result column="status" property="status" />
-        <result column="type" property="type" />
+    <resultMap id="BaseResultMap" type="com.github.kotlin.po.SystemAllocation">
     </resultMap>
 
 </mapper>

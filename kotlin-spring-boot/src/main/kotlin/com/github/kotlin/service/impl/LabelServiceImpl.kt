@@ -1,6 +1,6 @@
 package com.github.kotlin.service.impl;
 
-import com.github.kotlin.model.Label;
+import com.github.kotlin.po.Label;
 import com.github.kotlin.mapper.LabelMapper;
 import com.github.kotlin.service.LabelService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

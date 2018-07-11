@@ -2,12 +2,11 @@ package com.github.kotlin.core
 
 import com.github.kotlin.annotation.CurrentUser
 import com.github.kotlin.constant.SystemConstants
-import com.github.kotlin.model.User
+import com.github.kotlin.po.User
 import org.springframework.core.MethodParameter;
 import org.springframework.lang.Nullable
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
-import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 import org.springframework.web.multipart.support.MissingServletRequestPartException;

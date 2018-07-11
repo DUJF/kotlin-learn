@@ -1,9 +1,8 @@
-package com.github.kotlin.model
+package com.github.kotlin.po
 
 import com.baomidou.mybatisplus.enums.IdType
 import java.util.Date
 import com.baomidou.mybatisplus.annotations.TableId
-import com.baomidou.mybatisplus.annotations.TableField
 import com.baomidou.mybatisplus.activerecord.Model
 import com.baomidou.mybatisplus.annotations.TableName
 import java.io.Serializable
@@ -16,32 +15,32 @@ import java.io.Serializable
  * @author dujf
  * @since 2018-07-06
  */
-@TableName("user_log")
-class UserLog : Model<UserLog>() {
+@TableName("system")
+class System : Model<System>() {
 
     @TableId(value = "id", type = IdType.AUTO)
     var id: Int? = null
+    var name: String? = null
     /**
-     * 用户id
+     * 内容
      */
-    @TableField("user_id")
-    var userId: Int? = null
+    var content: String? = null
     /**
-     * 文章id
-     */
-    @TableField("article_id")
-    var articleId: Int? = null
-    /**
-     * 1浏览 2点赞 3
+     * l类型
      */
     var type: Int? = null
     /**
+     * 状态
+     */
+    var status: Int? = null
+    /**
+     * 备注
+     */
+    var remark: String? = null
+    /**
      * 创建时间
      */
-    @TableField("create_time")
-    var createTime: Date? = null
-    @TableField("artcle_id")
-    var artcleId: Int? = null
+    var createtime: Date? = null
 
 
     override fun pkVal(): Serializable? {
@@ -49,13 +48,14 @@ class UserLog : Model<UserLog>() {
     }
 
     override fun toString(): String {
-        return "UserLog{" +
+        return "System{" +
         ", id=" + id +
-        ", userId=" + userId +
-        ", articleId=" + articleId +
+        ", name=" + name +
+        ", content=" + content +
         ", type=" + type +
-        ", createTime=" + createTime +
-        ", artcleId=" + artcleId +
+        ", status=" + status +
+        ", remark=" + remark +
+        ", createtime=" + createtime +
         "}"
     }
 }

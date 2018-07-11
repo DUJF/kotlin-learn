@@ -1,6 +1,6 @@
 package com.github.kotlin.service.impl;
 
-import com.github.kotlin.model.Comment;
+import com.github.kotlin.po.Comment;
 import com.github.kotlin.mapper.CommentMapper;
 import com.github.kotlin.service.CommentService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

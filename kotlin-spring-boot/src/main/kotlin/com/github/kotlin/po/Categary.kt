@@ -1,8 +1,9 @@
-package com.github.kotlin.model
+package com.github.kotlin.po
 
 import com.baomidou.mybatisplus.enums.IdType
 import java.util.Date
 import com.baomidou.mybatisplus.annotations.TableId
+import com.baomidou.mybatisplus.annotations.TableField
 import com.baomidou.mybatisplus.activerecord.Model
 import com.baomidou.mybatisplus.annotations.TableName
 import java.io.Serializable
@@ -15,18 +16,24 @@ import java.io.Serializable
  * @author dujf
  * @since 2018-07-06
  */
-@TableName("message")
-class Message : Model<Message>() {
+@TableName("categary")
+class Categary : Model<Categary>() {
 
     @TableId(value = "id", type = IdType.AUTO)
     var id: Int? = null
+    /**
+     * 分类名称
+     */
     var name: String? = null
-    var email: String? = null
-    var mobile: String? = null
-    var content: String? = null
-    var createtime: Date? = null
-    var type: Int? = null
-    var status: Int? = null
+    /**
+     * 图片
+     */
+    var img: String? = null
+    /**
+     * 创建时间
+     */
+    @TableField("create_time")
+    var createTime: Date? = null
 
 
     override fun pkVal(): Serializable? {
@@ -34,15 +41,11 @@ class Message : Model<Message>() {
     }
 
     override fun toString(): String {
-        return "Message{" +
+        return "Categary{" +
         ", id=" + id +
         ", name=" + name +
-        ", email=" + email +
-        ", mobile=" + mobile +
-        ", content=" + content +
-        ", createtime=" + createtime +
-        ", type=" + type +
-        ", status=" + status +
+        ", img=" + img +
+        ", createTime=" + createTime +
         "}"
     }
 }

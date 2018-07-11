@@ -1,6 +1,6 @@
 package com.github.kotlin.service.impl;
 
-import com.github.kotlin.model.User;
+import com.github.kotlin.po.User;
 import com.github.kotlin.mapper.UserMapper;
 import com.github.kotlin.service.UserService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

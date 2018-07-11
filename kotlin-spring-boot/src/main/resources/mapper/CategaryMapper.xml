@@ -3,7 +3,7 @@
 <mapper namespace="com.github.kotlin.mapper.CategaryMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.github.kotlin.model.Categary">
+    <resultMap id="BaseResultMap" type="com.github.kotlin.po.Categary">
         <id column="id" property="id" />
         <result column="name" property="name" />
         <result column="img" property="img" />

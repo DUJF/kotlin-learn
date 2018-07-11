@@ -1,6 +1,6 @@
 package com.github.kotlin.service;
 
-import com.github.kotlin.model.UserFocus;
+import com.github.kotlin.po.UserFocus;
 import com.baomidou.mybatisplus.service.IService;
 
 /**

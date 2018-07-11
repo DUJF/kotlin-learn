@@ -1,6 +1,6 @@
 package com.github.kotlin.service;
 
-import com.github.kotlin.model.SystemAllocation;
+import com.github.kotlin.po.SystemAllocation;
 import com.baomidou.mybatisplus.service.IService;
 
 /**

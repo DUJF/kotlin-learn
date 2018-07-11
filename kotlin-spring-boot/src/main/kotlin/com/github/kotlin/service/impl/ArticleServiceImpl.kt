@@ -1,6 +1,6 @@
 package com.github.kotlin.service.impl;
 
-import com.github.kotlin.model.Article;
+import com.github.kotlin.po.Article;
 import com.github.kotlin.mapper.ArticleMapper;
 import com.github.kotlin.service.ArticleService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

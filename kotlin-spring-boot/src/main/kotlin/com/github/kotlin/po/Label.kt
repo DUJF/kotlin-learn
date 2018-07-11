@@ -1,4 +1,4 @@
-package com.github.kotlin.model
+package com.github.kotlin.po
 
 import com.baomidou.mybatisplus.enums.IdType
 import java.util.Date
@@ -10,27 +10,24 @@ import java.io.Serializable
 
 /**
  * <p>
- * 
+ * 标签
  * </p>
  *
  * @author dujf
  * @since 2018-07-06
  */
-@TableName("categary")
-class Categary : Model<Categary>() {
+@TableName("label")
+class Label : Model<Label>() {
 
     @TableId(value = "id", type = IdType.AUTO)
     var id: Int? = null
-    /**
-     * 分类名称
-     */
     var name: String? = null
     /**
      * 图片
      */
     var img: String? = null
     /**
-     * 创建时间
+     * 创建时间 
      */
     @TableField("create_time")
     var createTime: Date? = null
@@ -41,7 +38,7 @@ class Categary : Model<Categary>() {
     }
 
     override fun toString(): String {
-        return "Categary{" +
+        return "Label{" +
         ", id=" + id +
         ", name=" + name +
         ", img=" + img +

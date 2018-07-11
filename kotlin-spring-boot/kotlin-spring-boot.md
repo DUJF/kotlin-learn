@@ -79,7 +79,7 @@ annotation class CurrentUser(
 //用户解析
 import com.github.kotlin.annotation.CurrentUser
 import com.github.kotlin.constant.SystemConstants
-import com.github.kotlin.model.User
+import com.github.kotlin.po.User
 import org.springframework.core.MethodParameter;
 import org.springframework.lang.Nullable
 import org.springframework.web.bind.support.WebDataBinderFactory;

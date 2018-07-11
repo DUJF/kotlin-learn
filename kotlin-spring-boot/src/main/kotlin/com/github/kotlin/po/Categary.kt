@@ -1,4 +1,4 @@
-package com.github.kotlin.model
+package com.github.kotlin.po
 
 import com.baomidou.mybatisplus.enums.IdType
 import java.util.Date
@@ -10,44 +10,30 @@ import java.io.Serializable
 
 /**
  * <p>
- * 评论
+ * 
  * </p>
  *
  * @author dujf
  * @since 2018-07-06
  */
-@TableName("comment")
-class Comment : Model<Comment>() {
+@TableName("categary")
+class Categary : Model<Categary>() {
 
     @TableId(value = "id", type = IdType.AUTO)
     var id: Int? = null
     /**
-     * 用户id
+     * 分类名称
      */
-    @TableField("user_id")
-    var userId: Int? = null
+    var name: String? = null
     /**
-     * 文章id/评论id
+     * 图片
      */
-    @TableField("article_id")
-    var articleId: Int? = null
-    /**
-     * 内容
-     */
-    var content: String? = null
+    var img: String? = null
     /**
      * 创建时间
      */
     @TableField("create_time")
     var createTime: Date? = null
-    /**
-     * 1评论文章 2 回复评论文章
-     */
-    var type: Int? = null
-    /**
-     * 1未读 2已读 
-     */
-    var status: Int? = null
 
 
     override fun pkVal(): Serializable? {
@@ -55,14 +41,11 @@ class Comment : Model<Comment>() {
     }
 
     override fun toString(): String {
-        return "Comment{" +
+        return "Categary{" +
         ", id=" + id +
-        ", userId=" + userId +
-        ", articleId=" + articleId +
-        ", content=" + content +
+        ", name=" + name +
+        ", img=" + img +
         ", createTime=" + createTime +
-        ", type=" + type +
-        ", status=" + status +
         "}"
     }
 }

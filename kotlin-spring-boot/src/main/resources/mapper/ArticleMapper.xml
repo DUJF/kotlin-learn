@@ -3,7 +3,7 @@
 <mapper namespace="com.github.kotlin.mapper.ArticleMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.github.kotlin.model.Article">
+    <resultMap id="BaseResultMap" type="com.github.kotlin.po.Article">
         <id column="id" property="id" />
         <result column="categary_id" property="categaryId" />
         <result column="label_id" property="labelId" />

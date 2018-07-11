@@ -1,36 +1,46 @@
-package com.github.kotlin.model
+package com.github.kotlin.po
 
 import com.baomidou.mybatisplus.enums.IdType
 import java.util.Date
 import com.baomidou.mybatisplus.annotations.TableId
-import com.baomidou.mybatisplus.annotations.TableField
 import com.baomidou.mybatisplus.activerecord.Model
 import com.baomidou.mybatisplus.annotations.TableName
 import java.io.Serializable
 
 /**
  * <p>
- * 标签
+ * 
  * </p>
  *
  * @author dujf
  * @since 2018-07-06
  */
-@TableName("label")
-class Label : Model<Label>() {
+@TableName("system")
+class System : Model<System>() {
 
     @TableId(value = "id", type = IdType.AUTO)
     var id: Int? = null
     var name: String? = null
     /**
-     * 图片
+     * 内容
      */
-    var img: String? = null
+    var content: String? = null
     /**
-     * 创建时间 
+     * l类型
      */
-    @TableField("create_time")
-    var createTime: Date? = null
+    var type: Int? = null
+    /**
+     * 状态
+     */
+    var status: Int? = null
+    /**
+     * 备注
+     */
+    var remark: String? = null
+    /**
+     * 创建时间
+     */
+    var createtime: Date? = null
 
 
     override fun pkVal(): Serializable? {
@@ -38,11 +48,14 @@ class Label : Model<Label>() {
     }
 
     override fun toString(): String {
-        return "Label{" +
+        return "System{" +
         ", id=" + id +
         ", name=" + name +
-        ", img=" + img +
-        ", createTime=" + createTime +
+        ", content=" + content +
+        ", type=" + type +
+        ", status=" + status +
+        ", remark=" + remark +
+        ", createtime=" + createtime +
         "}"
     }
 }

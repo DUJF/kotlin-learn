@@ -1,6 +1,6 @@
 package com.github.kotlin.service;
 
-import com.github.kotlin.model.Comment;
+import com.github.kotlin.po.Comment;
 import com.baomidou.mybatisplus.service.IService;
 
 /**

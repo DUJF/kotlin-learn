@@ -15,6 +15,7 @@
     <modules>
         <module>kotlin-basics</module>
         <module>kotlin-spring-boot</module>
+        <module>oauth2-kotlin</module>
     </modules>
 
 

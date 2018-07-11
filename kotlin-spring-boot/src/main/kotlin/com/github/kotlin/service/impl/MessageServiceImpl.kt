@@ -1,6 +1,6 @@
 package com.github.kotlin.service.impl;
 
-import com.github.kotlin.model.Message;
+import com.github.kotlin.po.Message;
 import com.github.kotlin.mapper.MessageMapper;
 import com.github.kotlin.service.MessageService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

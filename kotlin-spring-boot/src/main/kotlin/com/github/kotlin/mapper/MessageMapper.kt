@@ -1,6 +1,6 @@
 package com.github.kotlin.mapper;
 
-import com.github.kotlin.model.Message;
+import com.github.kotlin.po.Message;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 /**

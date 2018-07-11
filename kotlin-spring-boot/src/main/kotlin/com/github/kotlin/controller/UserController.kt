@@ -10,7 +10,7 @@ import com.github.kotlin.core.RespPages
 import com.github.kotlin.core.ResultUtils
 import com.github.kotlin.constant.RequestPath
 import com.github.kotlin.constant.SystemConstants
-import com.github.kotlin.model.User
+import com.github.kotlin.po.User
 import com.github.kotlin.service.UserService
 import io.swagger.annotations.ApiOperation
 import org.springframework.web.bind.annotation.RequestMapping;

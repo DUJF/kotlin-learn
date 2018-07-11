@@ -1,6 +1,6 @@
 package com.github.kotlin.mapper;
 
-import com.github.kotlin.model.UserLog;
+import com.github.kotlin.po.UserLog;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 /**

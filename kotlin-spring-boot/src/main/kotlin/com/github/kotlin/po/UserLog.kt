@@ -1,4 +1,4 @@
-package com.github.kotlin.model
+package com.github.kotlin.po
 
 import com.baomidou.mybatisplus.enums.IdType
 import java.util.Date
@@ -10,26 +10,38 @@ import java.io.Serializable
 
 /**
  * <p>
- * 关注用户
+ * 
  * </p>
  *
  * @author dujf
  * @since 2018-07-06
  */
-@TableName("user_focus")
-class UserFocus : Model<UserFocus>() {
+@TableName("user_log")
+class UserLog : Model<UserLog>() {
 
     @TableId(value = "id", type = IdType.AUTO)
     var id: Int? = null
+    /**
+     * 用户id
+     */
     @TableField("user_id")
     var userId: Int? = null
-    @TableField("user_id_focus")
-    var userIdFocus: Int? = null
     /**
-     * 关注时间
+     * 文章id
+     */
+    @TableField("article_id")
+    var articleId: Int? = null
+    /**
+     * 1浏览 2点赞 3
+     */
+    var type: Int? = null
+    /**
+     * 创建时间
      */
     @TableField("create_time")
     var createTime: Date? = null
+    @TableField("artcle_id")
+    var artcleId: Int? = null
 
 
     override fun pkVal(): Serializable? {
@@ -37,11 +49,13 @@ class UserFocus : Model<UserFocus>() {
     }
 
     override fun toString(): String {
-        return "UserFocus{" +
+        return "UserLog{" +
         ", id=" + id +
         ", userId=" + userId +
-        ", userIdFocus=" + userIdFocus +
+        ", articleId=" + articleId +
+        ", type=" + type +
         ", createTime=" + createTime +
+        ", artcleId=" + artcleId +
         "}"
     }
 }

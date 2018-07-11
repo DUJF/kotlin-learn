@@ -1,6 +1,6 @@
 package com.github.kotlin.service;
 
-import com.github.kotlin.model.System;
+import com.github.kotlin.po.System;
 import com.baomidou.mybatisplus.service.IService;
 
 /**

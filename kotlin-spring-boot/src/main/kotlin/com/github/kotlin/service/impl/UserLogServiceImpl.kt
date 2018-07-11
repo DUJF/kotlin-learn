@@ -1,6 +1,6 @@
 package com.github.kotlin.service.impl;
 
-import com.github.kotlin.model.UserLog;
+import com.github.kotlin.po.UserLog;
 import com.github.kotlin.mapper.UserLogMapper;
 import com.github.kotlin.service.UserLogService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

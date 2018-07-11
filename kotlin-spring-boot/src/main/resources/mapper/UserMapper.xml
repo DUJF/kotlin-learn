@@ -3,24 +3,8 @@
 <mapper namespace="com.github.kotlin.mapper.UserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.github.kotlin.model.User">
-        <id column="id" property="id" />
-        <result column="role" property="role" />
-        <result column="account" property="account" />
-        <result column="password" property="password" />
-        <result column="head_img" property="headImg" />
-        <result column="name" property="name" />
-        <result column="sex" property="sex" />
-        <result column="bitrhday" property="bitrhday" />
-        <result column="email" property="email" />
-        <result column="mobile" property="mobile" />
-        <result column="question" property="question" />
-        <result column="answer" property="answer" />
-        <result column="type" property="type" />
-        <result column="status" property="status" />
-        <result column="create_time" property="createTime" />
-        <result column="last_login_time" property="lastLoginTime" />
-        <result column="birthday" property="birthday" />
+    <resultMap id="BaseResultMap" type="com.github.kotlin.po.User">
+
     </resultMap>
 
 </mapper>

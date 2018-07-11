@@ -2,8 +2,8 @@ package com.github.kotlin.aop
 
 import com.github.kotlin.annotation.Log
 import com.github.kotlin.constant.SystemConstants
-import com.github.kotlin.model.System
-import com.github.kotlin.model.User
+import com.github.kotlin.po.System
+import com.github.kotlin.po.User
 import com.github.kotlin.service.SystemService
 import org.springframework.web.context.request.RequestContextHolder
 import org.springframework.web.context.request.ServletRequestAttributes

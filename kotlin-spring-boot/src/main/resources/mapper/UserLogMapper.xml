@@ -3,13 +3,8 @@
 <mapper namespace="com.github.kotlin.mapper.UserLogMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.github.kotlin.model.UserLog">
-        <id column="id" property="id" />
-        <result column="user_id" property="userId" />
-        <result column="article_id" property="articleId" />
-        <result column="type" property="type" />
-        <result column="create_time" property="createTime" />
-        <result column="artcle_id" property="artcleId" />
+    <resultMap id="BaseResultMap" type="com.github.kotlin.po.UserLog">
+
     </resultMap>
 
 </mapper>

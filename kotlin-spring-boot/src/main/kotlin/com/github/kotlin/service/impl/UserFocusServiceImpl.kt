@@ -1,6 +1,6 @@
 package com.github.kotlin.service.impl;
 
-import com.github.kotlin.model.UserFocus;
+import com.github.kotlin.po.UserFocus;
 import com.github.kotlin.mapper.UserFocusMapper;
 import com.github.kotlin.service.UserFocusService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
